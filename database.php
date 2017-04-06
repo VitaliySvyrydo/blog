@@ -1,13 +1,15 @@
 <?php
-define('MYSQL_SERVER','localhost');
+define('MYSQL_SERVER', 'localhost');
 define('MYSQL_USER', 'homestead');
-define('MYSQL_PASSWORD','secret');
-define('MYSQL_DB','blog');
-function db_connect(){
-    $link = mysqli_connect(MYSQL_SERVER,MYSQL_USER,MYSQL_PASSWORD,MYSQL_DB)
+define('MYSQL_PASSWORD', 'secret');
+define('MYSQL_DB', 'blog');
+function db_connect()
+{
+    $link = mysqli_connect(MYSQL_SERVER, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DB)
     or die("Error:".mysqli_error($link));
-    mysqli_set_charset($link,"utf8");
+    mysqli_set_charset($link, "utf8");
 
     return $link;
 }
+
 ?>
